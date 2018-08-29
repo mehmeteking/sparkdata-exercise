@@ -39,7 +39,7 @@ package object example {
 
   trait SparkProps {
     def session: Session
-    val spark: Context = session.sparkContext
+    lazy val spark: Context = session.sparkContext
   }
   trait SparkApp extends App with SparkProps {
     val session = newSession()

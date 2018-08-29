@@ -16,6 +16,6 @@ object Main extends SparkApp {
   val inspector = new Inspector(session)
   val badGuys: Dataset[Inspector.Result] = inspector.investigate(businesses, inspections, violations)
 
-  businesses.show
+  badGuys.show
   spark.stop
 }
